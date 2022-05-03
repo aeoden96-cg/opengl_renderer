@@ -20,6 +20,7 @@ private:
 
 
     GLuint VAO;
+    GLuint tex_output;
     int draw_type;
 public:
     bool STATIC_DRAW;
@@ -65,6 +66,8 @@ public:
      */
     void render(Shader &current_shader, const std::vector<glm::mat4> &MVPs, const std::vector<int>& positions,
                 const std::vector<GLfloat> &data );
+
+    void render_static2(Shader &shader, const std::vector<glm::mat4> &MVPs, GLuint tex_output);
 };
 
 

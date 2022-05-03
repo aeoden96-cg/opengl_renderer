@@ -93,4 +93,13 @@ void Renderer::render(Shader &current_shader, const std::vector<glm::mat4> &MVPs
 }
 
 
+void Renderer::render_static2(Shader& shader,
+                             const std::vector<glm::mat4>& MVPs,
+                             GLuint tex_output){
+    this->tex_output = tex_output ;
+    assert(STATIC_DRAW);
+    this->render(shader,MVPs,{},std::vector<GLfloat>());
+}
+
+
 
